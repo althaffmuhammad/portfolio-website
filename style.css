@@ -1,0 +1,1310 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+/* for customized scrollbar */
+body {
+  overflow: auto;
+  scrollbar-width: thin;
+  /* For Firefox */
+  scrollbar-color: transparent transparent;
+  /* For Chrome, Edge, and Safari */
+}
+
+/* For Chrome, Edge, and Safari */
+body::-webkit-scrollbar {
+  width: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(19, 19, 19);
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  -webkit-box-shadow: 1px -1px 9px -2px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 1px -1px 9px -2px rgba(255, 255, 255, 1);
+  box-shadow: 1px -1px 9px -2px rgba(255, 255, 255, 1);
+}
+
+/* preloader styling */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#preloader.fade-out {
+  opacity: 0;
+}
+
+.lds-grid {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-grid div {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: crimson;
+  animation: lds-grid 1.2s linear infinite;
+}
+
+.lds-grid div:nth-child(1) {
+  top: 8px;
+  left: 8px;
+  animation-delay: 0s;
+}
+
+.lds-grid div:nth-child(2) {
+  top: 8px;
+  left: 32px;
+  animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(3) {
+  top: 8px;
+  left: 56px;
+  animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(4) {
+  top: 32px;
+  left: 8px;
+  animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(5) {
+  top: 32px;
+  left: 32px;
+  animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(6) {
+  top: 32px;
+  left: 56px;
+  animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(7) {
+  top: 56px;
+  left: 8px;
+  animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(8) {
+  top: 56px;
+  left: 32px;
+  animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(9) {
+  top: 56px;
+  left: 56px;
+  animation-delay: -1.6s;
+}
+
+@keyframes lds-grid {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+.header-bg {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  font-family: "Ubuntu", sans-serif;
+  transition: all 0.6s ease;
+}
+
+.header-bg .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+a.nav-link.text-white:hover {
+  color: rgb(192, 191, 191) !important;
+  transition: color 0.4s;
+}
+
+span.navbar-toggler-icon {
+  color: gainsboro !important;
+}
+
+/* particles styling */
+
+#particles-js {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 117vmin;
+}
+
+.particles-js-canvas-el {
+  opacity: 0.5;
+}
+
+/* home section styling */
+.home {
+  display: flex;
+  background: url("./img/background-image.jpeg.jpg");
+  /* background-color: black; */
+  display: cover;
+  background-size: cover;
+  height: 120vmin;
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.home .max-width {
+  margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1 {
+  font-size: 2vw;
+}
+
+.home .home-content .text-2 {
+  font-size: 6vw;
+  font-weight: 600;
+  margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+  font-size: 3vw;
+  margin: 5px 0;
+}
+
+/* .home .home-content .text-3 span {
+   color: crimson;
+   font-weight: 500;
+
+
+} */
+/* .home .home-content .text-3 .aos-animate {
+   opacity: 1;
+   transform: translateX(0);
+
+} */
+
+.home .home-content .text-3 span {
+  color: crimson;
+  display: inline-block;
+  transition: 0.5s;
+  transform-origin: left;
+  transform: scaleX(1);
+  position: relative;
+}
+
+.home .home-content .text-3 span::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: crimson;
+  transform-origin: right;
+  transition: 0.6s ease-in;
+  transition-delay: 2.7s;
+}
+
+.home .home-content .text-3 span::before[data-aos="custom-box-reveal"] {
+  transform: scaleX(1);
+}
+.home .home-content .text-3 .aos-init.aos-animate::before {
+  transform: scaleX(0);
+}
+
+.wave {
+  aspect-ratio: 930/300;
+  width: 100%;
+  position: absolute;
+  z-index: 99;
+  top: 118vmin;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.layer {
+  background-image: url("../img/layered-waves-haikei.svg");
+}
+
+/* about section styling */
+
+.about {
+  padding: 100px 0;
+  background-color: gainsboro;
+  position: relative;
+}
+
+/* floating icons */
+.about .floating-icon div,
+.contact .floating-icon div {
+  position: absolute;
+  color: gray;
+  transition: all 0.3s;
+}
+
+.passion .floating-icon div,
+.projects .floating-icon div {
+  position: absolute;
+  color: crimson;
+  transition: all 0.3s;
+}
+
+.floating-icon div:nth-child(1) {
+  top: 99%;
+  left: 12%;
+  font-size: 18px;
+  z-index: 88;
+  animation: animate 4s linear infinite;
+}
+
+.floating-icon div:nth-child(2) {
+  top: 95%;
+  left: 77%;
+  font-size: 26px;
+  z-index: 88;
+  animation: animate 6s linear infinite;
+}
+
+.floating-icon div:nth-child(3) {
+  top: 98%;
+  left: 95%;
+  font-size: 36px;
+  z-index: 88;
+  animation: animate 8s linear infinite;
+}
+
+.floating-icon div:nth-child(4) {
+  top: 69%;
+  left: 88%;
+  font-size: 24px;
+  z-index: 88;
+  animation: animate 5s linear infinite;
+}
+
+.floating-icon div:nth-child(5) {
+  top: 98%;
+  left: 66%;
+  font-size: 20px;
+
+  z-index: 88;
+  animation: animate 7s linear infinite;
+}
+
+.floating-icon div:nth-child(6) {
+  top: 90%;
+  font-size: 20px;
+  left: 30%;
+  font-size: 25px;
+  z-index: 88;
+  animation: animate 4s linear infinite;
+}
+
+.floating-icon div:nth-child(7) {
+  top: 90%;
+  left: 5%;
+  font-size: 30px;
+  z-index: 88;
+  animation: animate 9s linear infinite;
+}
+
+.floating-icon div:nth-child(8) {
+  top: 70%;
+  left: 40%;
+  font-size: 24px;
+  z-index: 88;
+  animation: animate 10s linear infinite;
+}
+
+.floating-icon div:nth-child(9) {
+  top: 50%;
+  left: 40%;
+  font-size: 26px;
+  z-index: 88;
+  animation: animate 4s linear infinite;
+}
+
+.floating-icon div:nth-child(10) {
+  top: 45%;
+  left: 65%;
+  font-size: 36px;
+  z-index: 88;
+  animation: animate 7s linear infinite;
+}
+
+.about {
+  font-family: "Poppins", sans-serif;
+}
+
+.about .title {
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  font-size: 40px;
+  z-index: 99;
+  position: relative;
+  color: gainsboro;
+  text-shadow: 1px 3px 13px rgba(0, 0, 0, 0.6);
+}
+
+/* custom scroll animation styling */
+
+.about .container .left-col[data-aos="custom-fade-right"] {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.about .container .left-col.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* .right-col animation styling */
+.about .container .right-col[data-aos="custom-fade-left"] {
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+.about .container .right-col.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about .container .right-col .text span {
+  color: crimson;
+  display: inline-block;
+  transition: 0.5s;
+  transform-origin: left;
+  transform: scaleX(1);
+  position: relative;
+}
+
+.about .container .right-col .text span::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(220, 220, 220, 1) 0%,
+    rgba(220, 20, 60, 1) 40%,
+    rgba(220, 20, 60, 1) 100%
+  );
+  transform-origin: right;
+  transition: 0.6s ease-in;
+  transition-delay: 0.7s;
+}
+
+.about .container .right-col .text span::before[data-aos="custom-box-reveal"] {
+  transform: scaleX(1);
+}
+.about .container .right-col .text .aos-init.aos-animate::before {
+  transform: scaleX(0);
+}
+
+.about .container .left-col img {
+  width: 50%;
+  z-index: 99;
+  position: relative;
+  height: auto;
+  object-fit: cover;
+  transition: all 0.2s ease-in;
+  filter: grayscale(0%) drop-shadow(2px 3px 8px #000000);
+}
+
+.about .container .left-col img:hover {
+  transform: translateY(-2px);
+  cursor: pointer;
+  filter: grayscale(90%) drop-shadow(2px 3px 8px #000000);
+  -webkit-filter: grayscale(90%) drop-shadow(2px 3px 8px #000000);
+  -moz-filter: grayscale(90%) drop-shadow(2px 3px 8px #000000);
+}
+
+.about .about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about .container .right-col .text {
+  font-size: 2vw;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about .container .row .resume {
+  margin: 0 auto;
+  margin-top: 30px;
+  position: relative;
+}
+
+.about .container .resume a {
+  font-size: 22px;
+  background-color: rgb(114, 114, 114);
+  padding: 7px 10px;
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+  color: whitesmoke;
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease-in-out;
+  display: inline-block;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.about .container .resume a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgba(114, 114, 114, 1) 0%,
+    rgba(173, 173, 173, 1) 39%,
+    rgb(184, 184, 184) 100%
+  );
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.about .container .resume a:hover::before {
+  animation: resume 500ms ease-in-out;
+}
+
+.about .container .resume a:hover {
+  transform: translateY(-1.9px);
+  transition: all 0.2s ease-in-out;
+  background-color: rgb(85, 85, 85);
+}
+
+.about .container .resume a i {
+  color: #444444;
+  padding-right: 8px;
+}
+
+.about .container .left-col {
+  width: 45%;
+  z-index: 99;
+}
+
+.about .container .right-col {
+  width: 55%;
+  padding-top: 7%;
+  z-index: 99;
+}
+
+.about .container .right-col p {
+  text-align: justify;
+}
+
+/* passion styling */
+
+.passion {
+  background-color: #111;
+  padding-bottom: 120px;
+  position: relative;
+}
+
+.passion .about-wave {
+  position: absolute;
+  z-index: 99;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 900/300;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.passion .about-wave svg {
+  position: relative;
+  display: block;
+  width: calc(142% + 1.3px);
+  height: 106px;
+}
+
+.passion .about-wave .shape-fill {
+  fill: gainsboro;
+}
+
+.passion .row .card {
+  background-color: #222;
+  color: gainsboro;
+  height: 97%;
+  font-size: 15px;
+  border-radius: 7px;
+  transition: all 0.5s ease-in;
+  border: none;
+  outline: none;
+  z-index: 99;
+  overflow: hidden;
+}
+
+/* card overlay */
+.passion .row .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgba(107, 10, 29, 1) 35%,
+    rgba(235, 21, 64, 1) 92%,
+    rgba(247, 22, 67, 1) 100%
+  );
+  border-radius: 100% 0% 100% 0% / 100% 100% 0% 0%;
+  transition: all 500ms ease-in-out;
+  transform: scale(0);
+  opacity: 0;
+  transform-origin: right bottom;
+}
+
+.passion .row .card:hover:before {
+  transform: scale(1.4);
+  opacity: 1;
+}
+
+.passion .card-title {
+  text-align: center;
+}
+
+.passion .title {
+  color: gainsboro;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  font-size: 40px;
+  padding-top: 90px;
+  padding-bottom: 60px;
+}
+
+.passion .row #icon {
+  text-align: center;
+  color: red;
+  font-size: 60px;
+  padding-top: 7%;
+  padding-bottom: 5%;
+  transition: all 0.3s ease-in;
+}
+
+.passion .row .card .card-body {
+  transition: all 0.3s ease;
+}
+
+.passion .row .card:hover .card-body {
+  transform: scale(1.05);
+}
+
+.passion .row .card:hover #icon {
+  color: gainsboro;
+  transform: scale(1.08);
+}
+
+.skills {
+  background-color: gainsboro;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+}
+
+.skills .skills-wave {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 900/300;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.skills .skills-wave svg {
+  position: relative;
+  display: block;
+  width: calc(142% + 1.3px);
+  height: 106px;
+}
+
+.skills .skills-wave .shape-fill {
+  fill: #111;
+}
+
+.skills h2 {
+  text-align: center;
+  padding-bottom: 80px;
+  font-size: 40px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+
+.skills .row {
+  padding-bottom: 50px;
+  z-index: 99;
+  position: relative;
+}
+
+.skills .row .skill-icon img {
+  width: 80px;
+  height: auto;
+}
+
+.skills .row .skill-icon .bootstrap.skill-img {
+  width: 140px;
+  height: auto;
+}
+
+.skills .row.secnd .skill-icon img {
+  width: 100px;
+  height: auto;
+}
+
+.skills .row {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+/* skill icon styling */
+.skills .row .skill-icon .skill-img {
+  transition: all 0.3s;
+}
+
+.skills .row .skill-icon .skill-img:hover {
+  cursor: pointer;
+  transform: scale(1.026);
+  transition: all 0.3s;
+}
+
+/* giving skill icons drop shadow effect */
+
+.skills .row .skill-icon .html5.skill-img:hover {
+  filter: drop-shadow(-5px 20px 26px #ea8933);
+}
+
+.skills .row .skill-icon .css.skill-img:hover {
+  filter: drop-shadow(-5px 20px 26px #6972e9);
+}
+
+.skills .row .skill-icon .js.skill-img:hover {
+  filter: drop-shadow(-5px 20px 26px #eab933);
+}
+
+.skills .row .skill-icon .bootstrap.skill-img:hover {
+  filter: drop-shadow(-5px 20px 26px #9f3fec);
+}
+
+.skills .row .skill-icon .github.skill-img:hover {
+  filter: drop-shadow(-5px 20px 26px #707070);
+}
+
+.skills .row .skill-icon .jquery.skill-img:hover {
+  filter: drop-shadow(-5px 20px 26px #3142da);
+}
+
+.skills .row .skill-icon .react.skill-img:hover {
+  filter: drop-shadow(-5px 20px 26px #3fb5ec);
+}
+
+.skills .row .skill-icon .sass.skill-img:hover {
+  filter: drop-shadow(-5px 20px 26px #ec3fb8);
+}
+
+/* tooltip box styling */
+
+.tippy-box {
+  margin-bottom: 25px;
+  -webkit-box-shadow: 0px 1px 11px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 11px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 11px 0px rgba(0, 0, 0, 0.75);
+}
+
+.projects {
+  background-color: #111;
+  padding-bottom: 60px;
+  padding-top: 36px;
+  color: white;
+  position: relative;
+}
+
+.projects .projects-wave {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 900/300;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.projects .projects-wave svg {
+  position: relative;
+  display: block;
+  width: calc(142% + 1.3px);
+  height: 106px;
+}
+
+.projects .projects-wave .shape-fill {
+  fill: gainsboro;
+}
+
+.projects .container {
+  padding-top: 50px;
+}
+
+.projects h2 {
+  color: gainsboro;
+  text-align: center;
+  padding: 40px;
+}
+
+.projects .row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.projects .row .card {
+  background-color: #1f1f1f;
+  border-radius: 6px;
+  padding: 3px 8px;
+  width: 300px;
+  z-index: 99;
+  height: 320px;
+  cursor: pointer;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+
+.projects .row .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgba(114, 114, 114, 1) 0%,
+    rgba(173, 173, 173, 1) 39%,
+    rgb(184, 184, 184) 100%
+  );
+  border-radius: 100% 0% 100% 0% / 100% 100% 0% 0%;
+  transition: all 500ms ease-in-out;
+  transform-origin: right bottom;
+  transform: scale(0);
+}
+
+.projects .row .card:hover:before {
+  animation: card 600ms ease-in-out;
+}
+
+.projects .row .card:hover {
+  transform: translateY(-2%);
+  transition: all 0.3s;
+  -webkit-box-shadow: 0px 25px 16px -20px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 25px 16px -20px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 25px 16px -20px rgba(0, 0, 0, 0.75);
+  background-color: #1a1a1a;
+}
+
+/* giving hover effect on card title */
+.projects .row .card:hover .card-title {
+  color: rgb(247, 32, 75);
+  transition: all 0.5s;
+}
+
+.projects .row .card .card-title {
+  font-weight: 600;
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+}
+
+.projects .row .card .card-title:hover {
+  text-decoration: underline;
+}
+
+.projects .row .card .card-text {
+  padding-top: 14px !important;
+
+  font-weight: 400;
+  font-size: 13px;
+  color: rgb(136, 136, 136);
+  line-height: 1.3;
+  text-align: justify;
+}
+
+.projects .row .card .icons {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 35px;
+}
+
+.projects .row .card .icons i {
+  font-size: 33px;
+  color: gainsboro;
+}
+
+.projects .row .card .icons .github i {
+  color: gainsboro;
+  display: inline-block;
+}
+
+.projects .row .card .icons .github i:hover {
+  color: rgb(255, 43, 85);
+  transition: all 0.4s;
+}
+
+.projects .row .card .skill {
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  bottom: 5px;
+}
+
+.projects .row .card .skill p {
+  padding-right: 24px;
+  font-family: "Gill Sans", sans-serif;
+  font-weight: 300;
+  color: gainsboro;
+  font-size: 14px;
+}
+
+.projects .github-btn {
+  padding-top: 90px;
+  display: flex;
+  justify-content: center;
+}
+
+.projects .github-btn a {
+  font-size: 20px;
+  background-color: rgb(114, 114, 114);
+  padding: 13px;
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 4px 5px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease-in-out;
+  display: inline-block;
+  border-radius: 5px;
+  z-index: 99;
+  position: relative;
+}
+
+/* overlay */
+.projects .github-btn a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgba(114, 114, 114, 1) 0%,
+    rgba(173, 173, 173, 1) 39%,
+    rgb(184, 184, 184) 100%
+  );
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.projects .github-btn a:hover::before {
+  animation: resume 500ms ease-in-out;
+}
+
+.projects .github-btn a:hover {
+  transform: translateY(-2.4px);
+  background-color: rgb(85, 85, 85);
+}
+
+/* icon styling */
+.projects .github-btn i {
+  font-size: 26px;
+  padding-right: 12px;
+  color: #000000;
+}
+
+.contact {
+  position: relative;
+}
+
+.contact .contact-wave {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.contact .contact-wave svg {
+  position: relative;
+  display: block;
+  width: calc(180% + 1.3px);
+  height: 92px;
+}
+
+.contact .contact-wave .shape-fill {
+  fill: #111111;
+}
+
+.contact .get-in-touch {
+  font-size: 90px;
+  text-align: center;
+  padding-top: 10%;
+  background-color: gainsboro;
+  padding-bottom: 5%;
+}
+
+.contact .send-me {
+  font-size: 24px;
+  background-color: rgb(114, 114, 114);
+  padding: 9px;
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+  color: whitesmoke;
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease-in-out;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.contact .send-me::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgba(114, 114, 114, 1) 0%,
+    rgba(173, 173, 173, 1) 39%,
+    rgb(184, 184, 184) 100%
+  );
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.contact .send-me:hover::before {
+  animation: resume 500ms ease-in-out;
+}
+
+.contact .send-me:hover {
+  display: inline-block;
+  transform: translateY(-1.7px);
+  background-color: rgb(85, 85, 85);
+  text-shadow: 1px 4px 5px rgba(0, 0, 0, 0.6);
+}
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 18px;
+  background-color: #111;
+  text-align: center;
+  color: gainsboro;
+  font-size: 16px;
+}
+
+.social-media {
+  font-size: 26px;
+  padding: 15px;
+  text-decoration: none;
+  color: gainsboro;
+}
+
+.social-media:hover {
+  color: rgb(151, 151, 151);
+}
+
+@media all and (max-width: 992px) {
+  .passion .row .card {
+    height: 97%;
+    font-size: 12px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .about .title {
+    color: #111;
+    text-shadow: 1px 3px 13px rgba(255, 255, 255, 0.6);
+  }
+
+  .projects .row {
+    justify-content: center;
+  }
+
+  .passion .row #icon {
+    text-align: center;
+    color: red;
+    font-size: 48px;
+    padding-top: 7%;
+    padding-bottom: 3%;
+    transition: all 0.3s ease-in;
+  }
+
+  .passion .about-wave svg,
+  .skills .skills-wave svg,
+  .projects .projects-wave svg {
+    position: relative;
+    display: block;
+    width: calc(142% + 1.3px);
+    height: 30px;
+  }
+
+  .contact .contact-wave svg {
+    width: calc(180% + 1.3px);
+    height: 50px;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .header-bg h2 {
+    font-size: 26px;
+  }
+
+  .home .max-width {
+    margin: auto 0 auto 20px;
+  }
+
+  .home .home-content .text-1 {
+    font-size: 5vw;
+  }
+
+  .home .home-content .text-2 {
+    font-size: 9vw;
+  }
+
+  .home .home-content .text-3 {
+    font-size: 5vw;
+  }
+
+  .about {
+    padding-bottom: 60px;
+  }
+
+  .about .container .text {
+    font-size: 5vw;
+  }
+
+  /* custom scroll animation styling */
+
+  .about .container .left-col[data-aos="custom-fade-right"] {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  .about .container .left-col.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* .right-col animation styling */
+  .about .container .right-col[data-aos="custom-fade-left"] {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  .about .container .right-col.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .about .container .right-col .text {
+    font-size: 4vw;
+  }
+
+  .about .container .row .resume {
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  .about .container .resume a {
+    font-size: 16px;
+    padding: 9px 10px;
+  }
+
+  .about .container .resume a i {
+    color: #444444;
+    padding-right: 8px;
+    font-size: 18px;
+  }
+
+  .contact .get-in-touch {
+    font-size: 45px;
+    padding-bottom: 15%;
+    padding-top: 30%;
+  }
+
+  .contact .get-in-touch h2 {
+    font-size: 25px;
+  }
+
+  .contact .send-me {
+    font-size: 20px;
+  }
+
+  .footer {
+    padding-top: 7%;
+  }
+
+  .social-media {
+    font-size: 20px;
+  }
+
+  .skills .row .skill-icon img {
+    width: 56px;
+    height: auto;
+  }
+
+  .skills .row .skill-icon .bootstrap.skill-img {
+    width: 86px;
+    height: auto;
+  }
+
+  .skills .row.secnd .skill-icon img {
+    width: 63px;
+    height: auto;
+  }
+
+  .projects .github-btn a {
+    font-size: 16px;
+    background-color: rgb(114, 114, 114);
+    padding: 10px;
+    font-family: "Ubuntu", sans-serif;
+    text-decoration: none;
+    color: rgb(221, 221, 221);
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease-in-out;
+    display: inline-block;
+    border-radius: 5px;
+  }
+
+  .projects .github-btn i {
+    font-size: 22px;
+    padding-right: 12px;
+    color: #000000;
+  }
+
+  .projects .github-btn a:hover {
+    display: inline-block;
+    transform: translateY(-2.4px);
+    background-color: rgb(85, 85, 85);
+  }
+
+  #particles-js {
+    display: none;
+  }
+}
+
+/* button animation  */
+
+@keyframes resume {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: scaleX(1);
+    opacity: 0.1;
+  }
+}
+
+/*project card animation */
+@keyframes card {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.05;
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* icons animations */
+@keyframes animate {
+  0% {
+    transform: scale(1) translateY(0) rotate(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(-100px) rotate(40deg);
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: scale(1.05) translateY(-200px) rotate(180deg);
+    opacity: 0;
+  }
+}
