@@ -701,8 +701,12 @@ span.navbar-toggler-icon {
   height: auto;
 }
 
-.skills .row .skill-icon .bootstrap.skill-img {
+.skills .row .skill-icon .node.skill-img {
   width: 140px;
+  height: auto;
+}
+.skills .row .skill-icon .github.skill-img {
+  width: 90px;
   height: auto;
 }
 
@@ -735,31 +739,31 @@ span.navbar-toggler-icon {
 }
 
 .skills .row .skill-icon .css.skill-img:hover {
-  filter: drop-shadow(-5px 20px 26px #6972e9);
+  filter: drop-shadow(-5px 20px 26px #3d4aff);
 }
 
 .skills .row .skill-icon .js.skill-img:hover {
-  filter: drop-shadow(-5px 20px 26px #eab933);
+  filter: drop-shadow(-5px 20px 26px #f6ff00);
 }
 
-.skills .row .skill-icon .bootstrap.skill-img:hover {
-  filter: drop-shadow(-5px 20px 26px #9f3fec);
+.skills .row .skill-icon .express.skill-img:hover {
+  filter: drop-shadow(-5px 20px 26px #4a4a4a);
 }
 
 .skills .row .skill-icon .github.skill-img:hover {
   filter: drop-shadow(-5px 20px 26px #707070);
 }
 
-.skills .row .skill-icon .jquery.skill-img:hover {
-  filter: drop-shadow(-5px 20px 26px #3142da);
+.skills .row .skill-icon .mongo.skill-img:hover {
+  filter: drop-shadow(-5px 20px 26px #0fff02);
 }
 
 .skills .row .skill-icon .react.skill-img:hover {
   filter: drop-shadow(-5px 20px 26px #3fb5ec);
 }
 
-.skills .row .skill-icon .sass.skill-img:hover {
-  filter: drop-shadow(-5px 20px 26px #ec3fb8);
+.skills .row .skill-icon .node.skill-img:hover {
+  filter: drop-shadow(-5px 20px 26px #0fff02);
 }
 
 /* tooltip box styling */
