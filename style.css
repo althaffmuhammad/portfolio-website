@@ -188,7 +188,7 @@ span.navbar-toggler-icon {
 /* home section styling */
 .home {
   display: flex;
-  background: url("./img/background-image.jpeg.jpg");
+  background: url("./img/1000003132-02.jpeg.jpg");
   /* background-color: black; */
   display: cover;
   background-size: cover;
@@ -634,7 +634,7 @@ span.navbar-toggler-icon {
 
 .passion .row #icon {
   text-align: center;
-  color: red;
+  color: crimson;
   font-size: 60px;
   padding-top: 7%;
   padding-bottom: 5%;
@@ -747,11 +747,11 @@ span.navbar-toggler-icon {
 }
 
 .skills .row .skill-icon .express.skill-img:hover {
-  filter: drop-shadow(-5px 20px 26px #4a4a4a);
+  filter: drop-shadow(-5px 20px 26px #050505);
 }
 
 .skills .row .skill-icon .github.skill-img:hover {
-  filter: drop-shadow(-5px 20px 26px #707070);
+  filter: drop-shadow(-5px 20px 26px #050505);
 }
 
 .skills .row .skill-icon .mongo.skill-img:hover {
@@ -1099,7 +1099,7 @@ span.navbar-toggler-icon {
 
   .passion .row #icon {
     text-align: center;
-    color: red;
+    color: crimson;
     font-size: 48px;
     padding-top: 7%;
     padding-bottom: 3%;
