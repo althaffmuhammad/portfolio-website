@@ -1224,6 +1224,14 @@ span.navbar-toggler-icon {
     width: 86px;
     height: auto;
   }
+  .skills .row .skill-icon .github.skill-img {
+    width: 60px;
+    height: auto;
+  }
+  .skills .row .skill-icon .node.skill-img {
+    width: 80px;
+    height: 80px;
+  }
 
   .skills .row.secnd .skill-icon img {
     width: 63px;
