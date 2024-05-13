@@ -271,7 +271,7 @@ span.navbar-toggler-icon {
 }
 
 .layer {
-  background-image: url("../img/layered-waves-haikei.svg");
+  background-image: url("./img/layered-waves-haikei.svg");
 }
 
 /* about section styling */
@@ -706,7 +706,7 @@ span.navbar-toggler-icon {
   height: auto;
 }
 .skills .row .skill-icon .github.skill-img {
-  width: 90px;
+  width: 100px;
   height: auto;
 }
 
@@ -1225,7 +1225,8 @@ span.navbar-toggler-icon {
     height: auto;
   }
   .skills .row .skill-icon .github.skill-img {
-    width: 60px;
+    width: 65px;
+    margin-top: 4px;
     height: auto;
   }
   .skills .row .skill-icon .node.skill-img {
